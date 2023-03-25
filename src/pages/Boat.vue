@@ -1,12 +1,5 @@
 <template>
     <svg class="wrap" :width="width" :height="height">
-<!--    <svg-bg>-->
-        <defs>
-            <filter id="displacementFilter">
-                <feTurbulence type="turbulence" baseFrequency="0.01 .1" numOctaves="1" result="turbulence" seed="53" />
-                <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="B" />
-            </filter>
-        </defs>
         <svg class="content" :viewBox="viewBox">
             <!-- 船身 #aa6428 #76421a-->
             <path d="M 0 70 Q 22 110 48 126 Q 110 145 200 140 Q 300 130 363 103 Q 380 90 395 62"
@@ -22,14 +15,11 @@
             <path d="M 42 116 Q 22 110 48 126 Q 110 145 200 140 Q 300 130 363 103 L 368 98 Q 160 145 35 115"
                   stroke="#aa6428" fill="#76421a" fill-opacity="0.7" filter="url(#displacementFilter)"/>
         </svg>
-<!--            </svg-bg>-->
     </svg>
 </template>
 
 <script setup>
-import SvgBg from './GridBg';
-import { computed, defineProps } from 'vue';
-
+import { defineProps, computed } from 'vue';
 const props = defineProps({
     width: {
         type: Number,

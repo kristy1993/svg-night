@@ -1,6 +1,5 @@
 <template>
-    <svg :width="width" :height="height">
-<!--        <svg-bg>-->
+    <svg class="wrap" :width="width" :height="height">
         <svg class="content" :viewBox="viewBox">
             <!--  兔子左耳朵 -->
             <path d="M 78 104 L 60 60 Q 50 25 60 15 Q 68 3 80 10 Q 100 20 102 88" stroke="black" fill="white"/>
@@ -14,7 +13,8 @@
             <path d="M 65 225 Q 40 260 95 240 " stroke="black" fill="white"/>
             <!--  兔子头 -->
             <path d="M 233 182 C 250 43 25 43 62 190 Q 50 210 65 226 Q 100 250 175 240
-                 M 200 220 C 150 240 180 260 222 238 Q 260 245 295 237 L 300 240 C 340 250 360 230 320 223 L 318 228 Q 360 125 230 138" stroke="black" fill="white"/>
+                     M 200 220 C 150 240 180 260 222 238 Q 260 245 295 237
+                     L 300 240 C 340 250 360 230 320 223 L 318 228 Q 360 125 230 138" stroke="black" fill="white"/>
             <!--  兔子眼睛 -->
             <path d="M 75 180 Q 90 190 100 180 " stroke="black" fill="none"/>
             <path d="M 75 180 Q 90 190 100 180 " stroke="black" fill="none" transform="translate(70, 3)"/>
@@ -25,14 +25,11 @@
             <path d="M 110 200 Q 128 200 115 205 Q 105 201 110 200 " stroke="black" fill="white"/>
             <path d="M 105 208 Q 114 213 115 205 Q 115 215 128 210" stroke="black" fill="white"/>
         </svg>
-<!--        </svg-bg>-->
     </svg>
 </template>
 
 <script setup>
-// import SvgBg from '../../components/GridBg';
-import { computed, defineProps } from 'vue';
-
+import { defineProps, computed } from 'vue';
 const props = defineProps({
     width: {
         type: Number,
