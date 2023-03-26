@@ -9,6 +9,7 @@
                 </feTurbulence>
                 <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="20" xChannelSelector="R" yChannelSelector="R" />
             </filter>
+            <!-- 分别画了船和兔子，然后组合在一起 -->
             <g id="boat-rabbit">
                 <boat :width="200" :height="100" x="100px" y="440px"/>
                 <rabbit :width="100" :height="100" x="150px" y="412px" />

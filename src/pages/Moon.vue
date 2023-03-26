@@ -5,7 +5,7 @@
             <filter id="blur">
                 <feGaussianBlur in="SourceGraphic" stdDeviation="8" />
             </filter>
-            <!-- 线性渐变滤镜 -->
+            <!-- 线性渐变-->
             <linearGradient id="moonColor" x1="0%" y1="0%" x2="100%" y2="80%">
                 <stop offset="10%" stop-color="#fbe70e" />
                 <stop offset="100%" stop-color="#fbfedf" />
